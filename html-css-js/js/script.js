@@ -1,5 +1,7 @@
 let users = [];
 
+let userID;
+
 let currentUser = users.filter(data => { return data.id == userID })[0];
 
 console.log(currentUser)
