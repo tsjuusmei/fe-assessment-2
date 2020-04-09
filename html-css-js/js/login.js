@@ -2,10 +2,16 @@ const userSelect = document.getElementById('user');
 
 let users = [];
 
+axios.get('https://fe-assessment-2-be.herokuapp.com/users')
+.then(response => {
+  users = response.data;
+  userDropdown();
+})
+
 function userDropdown() {
 
-for (let i=0; dataParsed.length > i; i++) {
-  users.push(dataParsed[i])
+for (let i=0; users.length > i; i++) {
+  users.push(users[i])
   }
   users.forEach(user => {
   const option = document.createElement('OPTION');
@@ -14,5 +20,3 @@ for (let i=0; dataParsed.length > i; i++) {
   userSelect.appendChild(option);
   })
 }
-
-userDropdown();
