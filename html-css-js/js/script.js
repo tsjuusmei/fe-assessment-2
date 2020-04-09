@@ -11,8 +11,8 @@ axios.get('https://fe-assessment-2-be.herokuapp.com/users')
   users = response.data;
 })
 
-axios.get('https://fe-assessment-2-be.herokuapp.com/currentUser')
+axios.get('https://fe-assessment-2-be.herokuapp.com/userID')
 .then(response => {
-    currentUser = response.data;
+    userID = response.data;
 })
 
