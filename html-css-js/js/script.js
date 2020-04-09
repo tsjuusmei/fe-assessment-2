@@ -18,7 +18,7 @@ axios.get('https://fe-assessment-2-be.herokuapp.com/users')
 
                 const promises = [];
                 currentUser.visitedBy.forEach(visitorID => {
-                    promises.push(users.filter({ _id: visitorID}))
+                    promises.push(users.filter(data => { return data.id == visitorID}))
                 });
                 
             })
