@@ -4,8 +4,8 @@ let users = [];
 
 axios.get('https://fe-assessment-2-be.herokuapp.com/users')
 .then(response => {
-  users = response.data;
-  console.log(users)
+  users = JSON.parse(response.data);
+  userDropdown()
 })
 
 function userDropdown() {
