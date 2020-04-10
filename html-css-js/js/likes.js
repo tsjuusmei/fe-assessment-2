@@ -33,9 +33,7 @@ axios.get('https://fe-assessment-2-be.herokuapp.com/users')
                                 return "./images/like.icon.png"
                             }
                         }
-
-                        li.innerHTML = like[i].name + '<img data-id=" like[i]._id "src= " ' + checkLike(like) + ' " class="liked" > '
-
+                        li.innerHTML = like[i].name + '<img data-id="' + like[i].id + '"src= " ' + checkLike(like) + ' " class="liked" > '
                         likesUl.appendChild(li)
                     }
                 });
@@ -44,7 +42,7 @@ axios.get('https://fe-assessment-2-be.herokuapp.com/users')
 
                 likeHeart.forEach((heart) => {
                     heart.addEventListener('click', (e) => {
-                        const id = e.target.dataset.id
+                        const id = e.target.dataset.id;
                         return axios.post('https://fe-assessment-2-be.herokuapp.com/like', { id: id })
                             .then((res) => {
                                 if (res.status == 200) {
@@ -55,7 +53,6 @@ axios.get('https://fe-assessment-2-be.herokuapp.com/users')
                             })
                     })
                 })
-
             })
     })
 
