@@ -14,7 +14,7 @@ axios.get('https://fe-assessment-2-be.herokuapp.com/users')
 
                 document.querySelector(".name").innerHTML = currentUser.name
                 document.querySelector(".numberVisitors").innerHTML = currentUser.visitedBy.length
-                document.querySelector(".numberLikes").innerHTML = currentUser.likedBy.length                
+                document.querySelector(".numberLikes").innerHTML = currentUser.likedBy.length
             })
     })
 
