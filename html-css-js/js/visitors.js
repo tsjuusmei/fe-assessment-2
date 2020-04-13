@@ -6,7 +6,8 @@ let currentUser;
 
 axios.get('https://fe-assessment-2-be.herokuapp.com/users')
     .then(response => {
-        users = response.data;
+        users = response.data
+        console.log(users)
         axios.get('https://fe-assessment-2-be.herokuapp.com/userID')
             .then(response => {
                 userID = response.data;
